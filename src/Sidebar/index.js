@@ -23,10 +23,11 @@ const Sidebar = () => {
         h='150px'
         w='100%'
         borderBottom='1px solid #ffffff'
+        p='20px 10px'
       >
         <VStack alignItems='flex-start' spacing='0'>
           <Text fontWeight='700'>Lucas Brumatti</Text>
-          <Text fontSize='16px'>Front-end Developer</Text>
+          <Text fontSize='14px'>Desarrollador Front-end</Text>
         </VStack>
 
         <HStack>
@@ -35,17 +36,17 @@ const Sidebar = () => {
         </HStack>
       </VStack>
       <VStack
-        bg='#1d1b1b'
+        bg='red.veryDark'
         flexGrow='1'
         w='100%'
         justifyContent='space-around'
       >
         <VStack spacing='1.5rem' alignItems='flex-start'>
-            <Link variant='hover'>Inicio</Link>
-            <Link variant='hover'>Proyectos</Link>
-            <Link variant='hover'>Sobre mi</Link>
-            <Link variant='hover'>Skills</Link>
-            <Link variant='hover'>Contacto</Link>
+            <Link variant='sidebar'>Inicio</Link>
+            <Link variant='sidebar'>Proyectos</Link>
+            <Link variant='sidebar'>Sobre mi</Link>
+            <Link variant='sidebar'>Skills</Link>
+            <Link variant='sidebar'>Contacto</Link>
         </VStack>
         <HStack spacing='1rem'>
             <FaGithub/>

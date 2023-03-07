@@ -5,13 +5,16 @@ const colors = {
         light: "hsl(13, 100%, 96%)",
         hover: "#f99076",
         bright: "hsl(12, 88%, 59%)",
+        veryDark: '#1d1b1b'
       },
       blue: {
         light: "hsl(227, 12%, 61%)",
         dark: "hsl(228, 39%, 23%)",
         veryDark: "hsl(233, 12%, 13%)",
       },
-      gray: "hsl(0, 0%, 98%)",
+    white: "#fff",
+    aquamarine: '#7fffd4',
+    black:'#000'
 }
 
 
@@ -19,7 +22,7 @@ export default extendTheme({
     styles: {
     global: {
       'html, body': {
-        color: colors.gray,
+        color: colors.white,
         fontSize: '18px'
       }
     }
@@ -31,6 +34,7 @@ export default extendTheme({
       red: {
         light: colors.red.light,
         bright: colors.red.bright,
+        veryDark: colors.red.veryDark
       },
       blue: {
         light: colors.blue.light,
@@ -50,16 +54,21 @@ export default extendTheme({
         variants: {
           outline: {
             border: "0",
-            fontWeight: "500"
+            fontWeight: "500",
+            _hover:{
+              bg:'none'
+            }
           },
           solid: {
-            borderRadius: "40px",
-            bg: colors.red.bright,
-            padding: "1.8rem 2rem",
+            borderRadius: "10px",
+            bg: colors.aquamarine,
+            padding: "1rem 1.4rem",
             boxShadow: "lg",
-            color: colors.gray,
+            color: colors.black,
             _hover: {
-              bg: colors.red.hover,
+              bg: 'none',
+              color: colors.aquamarine,
+              outline: `1px solid ${colors.aquamarine}`
             }
           },
           bgLight:{
@@ -85,30 +94,50 @@ export default extendTheme({
         },
       },
       Link:{
-        baseStyle: {
-          position:'relative',
-          paddingBottom: '5px',
-          '::after': {
-            content: '""',
-            position: 'absolute',
-            left: 0,
-            bottom: 0,
-            width: '100%',
-            height: '2px',
-            backgroundColor: colors.gray,
-            transform: 'scaleX(0)',
-            transformOrigin: 'bottom right',
-            transition:'transform 0.6s ease-out'
-          },
+        baseStyle:{
           _hover: {
             textDecoration:'none',
+          },
+        },
+        variants:{
+          sidebar:{
+            position:'relative',
+            paddingBottom: '5px',
+            '::after': {
+              content: '""',
+              position: 'absolute',
+              left: 0,
+              bottom: 0,
+              width: '100%',
+              height: '1px',
+              backgroundColor: colors.white,
+              transform: 'scaleX(0)',
+              transformOrigin: 'bottom right',
+              transition:'transform 0.6s ease-out'
+              },
+          _hover:{
             '::after': {
               transform: 'scaleX(1)',
               transformOrigin: 'bottom left' 
             },
+          }
           },
-            },
+        }
+      },
+      Heading:{
+        variants:{
+          primary:{
+              fontWeight: '700',
+              letterSpacing: '2px',
+              fontSize: '7xl',
           },
+          section:{
+            fontWeight:'extrabold',
+            fontSize:'5xl',
+            color: colors.aquamarine
+          }
+        }
+      }
         },
       },
 )
