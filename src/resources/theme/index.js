@@ -1,4 +1,4 @@
-import {extendTheme, TagRightIcon} from "@chakra-ui/react";
+import {AbsoluteCenter, extendTheme, TagRightIcon} from "@chakra-ui/react";
 
 const colors = {
     red: {
@@ -7,11 +7,14 @@ const colors = {
         bright: "hsl(12, 88%, 59%)",
         veryDark: '#1d1b1b'
       },
-      blue: {
-        light: "hsl(227, 12%, 61%)",
-        dark: "hsl(228, 39%, 23%)",
-        veryDark: "hsl(233, 12%, 13%)",
-      },
+    blue: {
+      light: "hsl(227, 12%, 61%)",
+      dark: "hsl(228, 39%, 23%)",
+      veryDark: "hsl(233, 12%, 13%)",
+    },
+    gray:{
+      veryDark: '#111'
+    },
     white: "#fff",
     aquamarine: '#7fffd4',
     black:'#000'
@@ -41,7 +44,9 @@ export default extendTheme({
         dark: colors.blue.dark,
         veryDark: colors.blue.veryDark,
       },
-      gray: colors.gray,
+      gray:{
+        veryDark: colors.gray.veryDark
+      },
     },
     layerStyles: {
         bgRed:{
@@ -135,9 +140,13 @@ export default extendTheme({
             fontWeight:'extrabold',
             fontSize:'5xl',
             color: colors.aquamarine
+          },
+          card:{
+            fontSize:'2xl',
+            fontWeight:'bold'
           }
         }
-      }
+      }, 
         },
       },
 )
