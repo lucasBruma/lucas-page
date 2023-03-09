@@ -12,7 +12,7 @@ const Proyectos = () => {
 
     return (
         <VStack py='3rem' bg='red.veryDark' spacing='4rem'>
-            <Heading w variant='section'>Proyectos</Heading>
+            <Heading variant='section'>Proyectos</Heading>
             <Grid templateColumns='repeat(3, 1fr)' autoRows='315px' gap={4} width='80%'>
                 {projectDetails.map((project, index)=>{
                     if(index<3){
@@ -36,7 +36,7 @@ const Proyectos = () => {
                                         demo={project.link}
                                         repo={project.repository}
                                         description={project.es.description}
-                                    >hola</ProjectCard>
+                                    />
                                 </Collapse>
                     }
                 })}
