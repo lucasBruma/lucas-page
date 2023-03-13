@@ -10,12 +10,20 @@ const Portada = () => {
 
     return (
         <Box bgImage={`${fondoPortada}`} bgRepeat='repeat' height='100vh' width='100%'>
-            <Flex height='100%' justifyContent='center' width='fit-content' m='0 auto' alignItems='flex-start' direction='column'>
-                <Text fontSize='2xl'>Hola, soy</Text>
-                <Heading variant='primary' mt='0' lineHeight='.9'>
+            <Flex 
+                height='100%' 
+                justifyContent='center' 
+                width='fit-content' 
+                m='0 auto' 
+                alignItems='flex-start' 
+                direction='column'
+                marginLeft={['2rem','2rem','auto']}
+            >
+                <Text fontSize={['xl',null,'2xl']}>Hola, soy</Text>
+                <Heading variant='primary' mt='0' lineHeight='.9' fontSize={['6xl', null, 'auto']}>
                     <Box as='span' color='aquamarine'>L</Box>ucas <Box as='span' color='aquamarine'>B</Box>rumatti
                 </Heading>
-                <Text fontSize='2xl' mt='.8rem'>
+                <Text fontSize={['xl',null,'2xl']} w={['65%',null,'100%']} mt='.8rem'>
                     <Box as='span'>&lt;p&gt;</Box>
                         Desarrollador Front-end
                     <Box as='span'>&lt;/p&gt;</Box>

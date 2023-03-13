@@ -151,11 +151,7 @@ export const projectDetails = [
 export const htmlAboutme = {
     es: {
         title_about: 'Sobre mi',
-        about_me: `Soy oriunda de Rosario, Santa Fe, Argentina y desde el 2021 vivo en Múnich, Alemania.
-        En Rosario trabajaba como profesora de violín, y desde el inicio de la pandemia decidí incursionar en el mundo de la programación. 
-        Comencé resolviendo problemas de programación competitiva usando Python y gracias a la curiosidad que todo esto me despertó, realicé la carrera de desarrolladora Front-end de un año de duración en el bootcamp para mujeres ADA ITW.
-        Tuve la fortuna de tener como profesora a la maravillosa María Elena Rey, que me acompañó en todo este camino de aprendizaje y me enseñó la belleza de programar.
-        Después de haber sido estudiante de física en la universidad y haber dado clases de violín, encontré en el desarrollo Front-end, una simbiosis perfecta entre lógica y arte.`,
+        about_me: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
 
         contact: `Si querés contactarme, podés escribirme un correo o completar el formulario que se encuentra  acá abajo.
         Sugerencias, comentarios, preguntas son siempre bienvenidas!`,

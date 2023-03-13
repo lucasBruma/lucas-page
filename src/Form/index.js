@@ -2,7 +2,7 @@ import React from 'react';
 import { 
     Button,
     FormControl,
-    HStack,
+    Stack,
     Input,
     VStack,
     useToast,
@@ -64,7 +64,7 @@ function Form() {
                 position='relative'
             >   
             <VStack width='100%' alignItems='flex-start'>
-                <HStack w='100%'>
+                <Stack direction={['column', null, 'row']} w='100%'>
                     {/* name */}
                     <Input
                         id='user_name'
@@ -94,7 +94,7 @@ function Form() {
                             pattern: { value: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i, message: 'This is not an email' }
                         })}
                     />
-                </HStack>
+                </Stack>
 
 
                 {/* Message */}
