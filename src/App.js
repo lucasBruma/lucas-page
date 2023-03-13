@@ -5,48 +5,29 @@ import { Proyectos } from './Proyectos';
 import {About} from './About';
 import {Skills} from './Skills';
 import {Contact} from './Contact';
-import { Box, Text, Link, HStack, VStack, Button, Flex, Icon } from '@chakra-ui/react';
+import { Box, Button, Icon } from '@chakra-ui/react';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {IoMdClose} from 'react-icons/io';
 import { Modal } from './Modal';
+import Context from './Context/Context'
 
-{/* <Button variant='icon' onClick={()=> {toggleModal()}} paddingInlineStart='0' paddingInlineEnd='0' minWidth='0'>
-{openModal ?
-<Image src={closeIcon} position='relative' zIndex='100'></Image>
-:
-<Image src={hamburgerIcon}></Image>
-}  
-</Button> */}
-
-const sections = [{
-  href: 'home',
-  name: 'Inicio'
-},
-{
-  href: 'projects',
-  name: 'Proyectos'
-},
-{
-  href: 'about',
-  name: 'About Us'
-},
-{
-  href: 'skills',
-  name: 'Skills'
-},
-{
-  href: 'contact',
-  name: 'Contacto'
-}]
 
 
 const App = () => {
   const initialState = window.innerWidth < 768 ? false : true;
   const [showSidebar, setShowSidebar] = React.useState(initialState);
-  const [openModal, setOpenModal] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [language, setLanguage] = React.useState('en');
+
+  const context = {
+    language: language,
+    setLanguage: setLanguage,
+  }
+
+  document.documentElement.lang = context.language;
 
   const toggleModal = () =>{
-    setOpenModal(!openModal)
+    setIsOpen(!isOpen)
   }
 
   React.useEffect(() => {
@@ -55,6 +36,7 @@ const App = () => {
         setShowSidebar(false);
     } else {
         setShowSidebar(true);
+        setIsOpen(false)
     }
     }
     window.addEventListener('resize', handleResize);
@@ -63,10 +45,10 @@ const App = () => {
 
 
   return (
-    <>   
+    <Context.Provider value={context}>   
       <Box marginLeft={['0','0','210px']} position='relative'>
         {showSidebar ?
-          <Sidebar sections={sections}/> :
+          <Sidebar/> :
           <Button 
             variant='icon' 
             onClick={()=> {toggleModal()}}  
@@ -79,14 +61,14 @@ const App = () => {
             paddingInlineStart={0}
             paddingEnd={0}
           >
-            {openModal ?
+            {isOpen ?
             <Icon as={IoMdClose}></Icon>
             :
             <Icon bgColor='rgba(0,0,0,0.3)' borderRadius='7px' w='3rem' as={GiHamburgerMenu}></Icon>
             }  
           </Button> 
         }
-        {openModal && <Modal sections={sections} setOpenModal={setOpenModal}/>}
+        {isOpen && <Modal setIsOpen={setIsOpen} isOpen={isOpen}/>}
         <Portada />
         <Proyectos/>
         <About/>
@@ -94,7 +76,7 @@ const App = () => {
         <Contact/>
       </Box>
       {/* El resto del contenido de tu aplicación */}
-    </>
+    </Context.Provider>
   );
 };
 

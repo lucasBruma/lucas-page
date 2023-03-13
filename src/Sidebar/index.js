@@ -1,11 +1,18 @@
 import React from 'react';
-import { Box, Text, HStack, VStack, Button, Flex } from '@chakra-ui/react';
-import { FaGithub, FaLink, FaLinkedin,  } from 'react-icons/fa';
+import { Text, HStack, VStack, Button, Flex } from '@chakra-ui/react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { AiFillMail  } from 'react-icons/ai';
 import { Link, animateScroll as scroll } from "react-scroll";
+import Context from "../Context/Context";
+import { htmlTitles, sections } from '../resources/datos';
 
+const Sidebar = () => {
+  const context = React.useContext(Context);
 
-const Sidebar = ({sections}) => {
+  const handleClickLanguage = (e) => {
+    context.setLanguage(e.target.value);
+  };
+
   return (
     <Flex
       position="fixed"
@@ -29,12 +36,24 @@ const Sidebar = ({sections}) => {
       >
         <VStack alignItems='flex-start' spacing='0'>
           <Text fontWeight='700'>Lucas Brumatti</Text>
-          <Text fontSize='14px'>Desarrollador Front-end</Text>
+          <Text fontSize='14px'>{htmlTitles[context.language].intro}</Text>
         </VStack>
 
         <HStack>
-            <Button variant='outline'>EN</Button>
-            <Button variant='outline'>ES</Button>
+            <Button 
+              variant='outline'
+              onClick={handleClickLanguage}
+              aria-label="English"
+              lang="en"
+              value="en"
+            >EN</Button>
+            <Button 
+              variant='outline'
+              onClick={handleClickLanguage}
+              aria-label="Español"
+              lang="es"
+              value="es"
+            >ES</Button>
         </HStack>
       </VStack>
       <VStack
@@ -43,7 +62,7 @@ const Sidebar = ({sections}) => {
         w='100%'
         justifyContent='space-around'
       >
-        <VStack spacing='1rem' alignItems='flex-start'>
+        <VStack spacing='1rem' alignItems='flex-start' w='107px'>
             {sections.map((section, index)=>{
                 return <Link 
                         key={index} 
@@ -57,9 +76,9 @@ const Sidebar = ({sections}) => {
                         variant='sidebar' 
                         paddingInlineStart={0} 
                         paddingInlineEnd={0}
-                        fontWeight='200'
+                        fontWeight='200'           
                       >
-                        {section.name}
+                        {section[context.language].name}
                       </Button>
                     </Link>
                 })}

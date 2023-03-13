@@ -1,27 +1,22 @@
 import React from 'react';
-import { 
-    Button,
-    FormControl,
-    Stack,
-    Input,
-    VStack,
-    useToast,
-    Textarea
-} from '@chakra-ui/react';
+import { Button,FormControl,Stack,Input,VStack,useToast,Textarea} from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import Context from "../Context/Context";
+import { htmlAboutme } from '../resources/datos';
 
 function Form() {
     const {register, formState:{errors}, handleSubmit} = useForm();
     const toast = useToast();
     const form = React.useRef();
+    const context = React.useContext(Context);
 
     const onSubmit = (e) =>{
           emailjs.sendForm('service_k46cms9', 'template_l71pywl', form.current, '-OucRu_7vgmbmb-2S')
             .then((result) => {
                 toast({
-                    title: 'Message sent.',
-                    description: `Your message was sent successfully`,
+                    title: htmlAboutme[context.language].form.modal_title,
+                    description: htmlAboutme[context.language].form.modal_message,
                     status: 'success',
                     duration: 9000,
                     isClosable: true,
@@ -35,8 +30,8 @@ function Form() {
     const onClick = (errors)=>{
         if(errors.user_email){
             toast({
-                title: 'The email was not sent.',
-                description: "Check your email",
+                title: htmlAboutme[context.language].form.modal_error,
+                description: htmlAboutme[context.language].form.modal_email,
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
@@ -44,8 +39,8 @@ function Form() {
             })
         }else if (errors.user_name || errors.message){
             toast({
-                title: 'The email was not sent.',
-                description: "Remember that every field is required",
+                title: htmlAboutme[context.language].form.modal_error,
+                description: htmlAboutme[context.language].form.modal_required,
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
@@ -70,7 +65,7 @@ function Form() {
                         id='user_name'
                         name="user_name"
                         type='text'
-                        placeholder='Name'
+                        placeholder={htmlAboutme[context.language].form.name}
                         borderRadius='10px' 
                         py='1.8rem' 
                         bg='white' 
@@ -84,7 +79,7 @@ function Form() {
                         id='user_email'
                         name="user_email"
                         type='email'
-                        placeholder='Email'
+                        placeholder={htmlAboutme[context.language].form.email}
                         borderRadius='10px' 
                         py='1.8rem' 
                         bg='white' 
@@ -101,7 +96,7 @@ function Form() {
                 <Textarea
                     id='message'
                     name='message'
-                    placeholder='Message'
+                    placeholder={htmlAboutme[context.language].form.message}
                     borderRadius='10px' 
                     py='1.8rem' 
                     bg='white' 
@@ -119,7 +114,8 @@ function Form() {
                         onClick(errors)
                     }} 
                     marginLeft='1rem'
-                >Send message!</Button>
+                >{htmlAboutme[context.language].form.submit}
+                </Button>
             </VStack>
                   
             </FormControl> 
