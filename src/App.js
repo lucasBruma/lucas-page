@@ -18,6 +18,27 @@ import { Modal } from './Modal';
 }  
 </Button> */}
 
+const sections = [{
+  href: 'home',
+  name: 'Inicio'
+},
+{
+  href: 'projects',
+  name: 'Proyectos'
+},
+{
+  href: 'about',
+  name: 'About Us'
+},
+{
+  href: 'skills',
+  name: 'Skills'
+},
+{
+  href: 'contact',
+  name: 'Contacto'
+}]
+
 
 const App = () => {
   const initialState = window.innerWidth < 768 ? false : true;
@@ -42,21 +63,30 @@ const App = () => {
 
 
   return (
-    <>
-
-      
+    <>   
       <Box marginLeft={['0','0','210px']} position='relative'>
         {showSidebar ?
-          <Sidebar/> :
-          <Button variant='icon' onClick={()=> {toggleModal()}}  fontSize='40px' position='absolute' right='10px' top='30px' zIndex='200' >
+          <Sidebar sections={sections}/> :
+          <Button 
+            variant='icon' 
+            onClick={()=> {toggleModal()}}  
+            fontSize='40px' 
+            position='fixed' 
+            right='10px' 
+            top='20px' 
+            zIndex='200' 
+            width='3rem'
+            paddingInlineStart={0}
+            paddingEnd={0}
+          >
             {openModal ?
-            <Icon position='fixed' right='20px' top='30px' zIndex='200' as={IoMdClose}></Icon>
+            <Icon as={IoMdClose}></Icon>
             :
-            <Icon  as={GiHamburgerMenu}></Icon>
+            <Icon bgColor='rgba(0,0,0,0.3)' borderRadius='7px' w='3rem' as={GiHamburgerMenu}></Icon>
             }  
           </Button> 
         }
-        {openModal && <Modal/>}
+        {openModal && <Modal sections={sections} setOpenModal={setOpenModal}/>}
         <Portada />
         <Proyectos/>
         <About/>

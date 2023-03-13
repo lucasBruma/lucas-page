@@ -23,7 +23,7 @@ const Skills = () => {
     }, []);
 
     return (
-    <VStack py='3rem' bg='red.veryDark' spacing='4rem'>
+    <VStack py='3rem' bg='red.veryDark' spacing='4rem' id='skills'>
         <Heading variant='section' data-aos='flip-down'>Skills</Heading>
         <Flex flexWrap='wrap' gap='2rem' maxWidth={['85%',null,'55%']} justifyContent='center'>
             {skills.map((skill, index)=>{

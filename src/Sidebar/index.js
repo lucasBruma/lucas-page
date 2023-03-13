@@ -1,9 +1,11 @@
 import React from 'react';
-import { Box, Text, Link, HStack, VStack, Button, Flex } from '@chakra-ui/react';
+import { Box, Text, HStack, VStack, Button, Flex } from '@chakra-ui/react';
 import { FaGithub, FaLink, FaLinkedin,  } from 'react-icons/fa';
 import { AiFillMail  } from 'react-icons/ai';
+import { Link, animateScroll as scroll } from "react-scroll";
 
-const Sidebar = () => {
+
+const Sidebar = ({sections}) => {
   return (
     <Flex
       position="fixed"
@@ -41,12 +43,26 @@ const Sidebar = () => {
         w='100%'
         justifyContent='space-around'
       >
-        <VStack spacing='1.5rem' alignItems='flex-start'>
-            <Link variant='sidebar'>Inicio</Link>
-            <Link variant='sidebar'>Proyectos</Link>
-            <Link variant='sidebar'>Sobre mi</Link>
-            <Link variant='sidebar'>Skills</Link>
-            <Link variant='sidebar'>Contacto</Link>
+        <VStack spacing='1rem' alignItems='flex-start'>
+            {sections.map((section, index)=>{
+                return <Link 
+                        key={index} 
+                        to={`${section.href}`} 
+                        spy={true} 
+                        smooth={true} 
+                        offset={50} 
+                        duration={500}
+                    >
+                      <Button 
+                        variant='sidebar' 
+                        paddingInlineStart={0} 
+                        paddingInlineEnd={0}
+                        fontWeight='200'
+                      >
+                        {section.name}
+                      </Button>
+                    </Link>
+                })}
         </VStack>
         <HStack spacing='1rem'>
             <FaGithub/>

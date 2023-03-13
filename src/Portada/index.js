@@ -9,7 +9,7 @@ const Portada = () => {
     // const context = useContext(Context);
 
     return (
-        <Box bgImage={`${fondoPortada}`} bgRepeat='repeat' height='100vh' width='100%'>
+        <Box bgImage={`${fondoPortada}`} bgRepeat='repeat' height='100vh' width='100%' id='home'>
             <Flex 
                 height='100%' 
                 justifyContent='center' 

@@ -96,6 +96,28 @@ export default extendTheme({
           icon: {
             bg: 'auto',
           },
+          sidebar:{
+            position:'relative',
+            paddingBottom: '1px',
+            '::after': {
+              content: '""',
+              position: 'absolute',
+              left: 0,
+              bottom: 0,
+              width: '100%',
+              height: '1px',
+              backgroundColor: colors.white,
+              transform: 'scaleX(0)',
+              transformOrigin: 'bottom right',
+              transition:'transform 0.6s ease-out'
+              },
+          _hover:{
+            '::after': {
+              transform: 'scaleX(1)',
+              transformOrigin: 'bottom left' 
+            },
+          }
+          },
         },
       },
       Link:{

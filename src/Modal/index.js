@@ -1,10 +1,15 @@
 import React from 'react';
-import { Box, Text, VStack, Heading, Stack, Image, Link, HStack, Button } from '@chakra-ui/react';
+import { Box, Text, VStack, Heading, Stack, Image, HStack, Button } from '@chakra-ui/react';
 import { FaGithub, FaLink, FaLinkedin,  } from 'react-icons/fa';
 import { AiFillMail  } from 'react-icons/ai';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
-const Modal = () => {
+const Modal = ({sections, setOpenModal}) => {
+
+    const closeModal = ()=>{
+        setOpenModal(false)
+    }
 
     return (
         <VStack 
@@ -28,11 +33,26 @@ const Modal = () => {
                 </HStack>
             </VStack>
             <VStack spacing='1.7rem'>
-                <Link>Inicio</Link>
-                <Link>Proyectos</Link>
-                <Link>Sobre mi</Link>
-                <Link>Skills</Link>
-                <Link>Contacto</Link>
+                {sections.map((section, index)=>{
+                    return <Link 
+                            key={index} 
+                            to={`${section.href}`} 
+                            spy={true} 
+                            smooth={true} 
+                            offset={50} 
+                            duration={500}
+                        >
+                            <Button 
+                                variant='sidebar' 
+                                paddingInlineStart={0} 
+                                paddingInlineEnd={0}
+                                fontWeight='200'
+                                onClick={closeModal}
+                            >
+                                {section.name}
+                            </Button>
+                        </Link>
+                })}
             </VStack>
             <HStack spacing='3rem' fontSize='1.6rem'>
                 <FaGithub/>

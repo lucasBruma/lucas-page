@@ -12,7 +12,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <Flex direction='column' py='3rem' bg='red.veryDark' alignItems='center'>
+        <Flex direction='column' py='3rem' bg='red.veryDark' alignItems='center' id='contact'>
             <Heading variant='section' data-aos='flip-down'>{htmlAboutme.es.title_contact}</Heading>
             <Text marginBottom='3rem'>{htmlAboutme.es.form.required_message}</Text>
             <Form/>

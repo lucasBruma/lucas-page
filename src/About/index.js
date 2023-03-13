@@ -12,7 +12,7 @@ const About = () => {
     }, []);
 
     return (
-        <VStack py='3rem' bg='red.veryDark' spacing='4rem'>
+        <VStack py='3rem' bg='red.veryDark' spacing='4rem' id='about'>
             <Heading variant='section' data-aos='flip-down'>About</Heading>
             <Stack direction={['column', null, 'row']} w='80%' spacing='3rem' alignItems='flex-start'>
                 <Box

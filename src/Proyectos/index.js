@@ -15,7 +15,7 @@ const Proyectos = () => {
         AOS.init({ duration: 1000 });
     }, []);
     return (
-        <VStack py='3rem' bg='red.veryDark' spacing='4rem'>
+        <VStack py='3rem' bg='red.veryDark' spacing='4rem' id='projects'>
             <Heading variant='section'  data-aos='flip-down'>Proyectos</Heading>
             <Grid templateColumns={['repeat(1, 1fr)',null,'repeat(3, 1fr)']} autoRows='315px' gap={4} width='80%' data-aos='fade-right'>
                 {projectDetails.map((project, index)=>{
