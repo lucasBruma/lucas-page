@@ -1,9 +1,14 @@
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineArrowRight, AiFillInfoCircle } from 'react-icons/ai';
 import React from 'react';
-import { Box, Card, Text,Heading, CardBody, Icon, CardFooter, CardHeader, Tag, Container, VStack, Button, Link } from '@chakra-ui/react';
-
+import { Box, Card, Text,Heading,
+        Icon, CardFooter, CardHeader,
+        Tag, Container, VStack, Button,
+        Link, useDisclosure} from '@chakra-ui/react';
+import { ModalProject } from './ModalProject';
 
 const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+
 
     return (
         <Box position='relative' 
@@ -15,7 +20,7 @@ const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
             _hover={{
                 transform: 'rotateY(-180deg)'
             }}
-            transition='2s'
+            transition='1.3s'
             >
             {/* front */}
             <Card 
@@ -59,9 +64,9 @@ const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
                 }}
             >
                 <Container bgColor='rgba(0, 0, 0, 0.651)' h='100%'>
-                    <VStack h='100%' justifyContent='center'>
+                    <VStack h='100%' justifyContent='center' pos='relative'>
                         <Link href={demo} target='_blank'>
-                        <Button 
+                            <Button 
                                 variant='solid' 
                                 w='150px' 
                                 justifyContent='space-around'   
@@ -80,6 +85,16 @@ const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
                                 <Icon as={AiOutlineArrowRight}/>
                             </Button>
                         </Link>
+                        <Button 
+                            variant='solid' 
+                            w='150px' 
+                            justifyContent='space-around'
+                            onClick={onOpen}   
+                        >
+                            <Text mt='2px'>Info</Text>
+                            <Icon as={AiFillInfoCircle}/>
+                        </Button>
+                        <ModalProject isOpen={isOpen} onClose={onClose} title={title} description={description} demo={demo}/>
                     </VStack>
                 </Container>
             </Card>

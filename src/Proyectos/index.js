@@ -27,7 +27,7 @@ const Proyectos = () => {
                                     bg={project.preview}
                                     demo={project.link}
                                     repo={project.repository}
-                                    description={project.es.description}
+                                    description={project[context.language].description}
                                     key={index}
                                     
                                 />
@@ -40,7 +40,7 @@ const Proyectos = () => {
                                         bg={project.preview}
                                         demo={project.link}
                                         repo={project.repository}
-                                        description={project.es.description}
+                                        description={project[context.language].description}
                                     />
                                 </Collapse>
                     }

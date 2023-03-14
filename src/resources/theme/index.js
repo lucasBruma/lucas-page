@@ -1,4 +1,4 @@
-import {AbsoluteCenter, extendTheme, TagRightIcon} from "@chakra-ui/react";
+import {AbsoluteCenter, extendTheme, TagRightIcon, transition} from "@chakra-ui/react";
 
 const colors = {
     red: {
@@ -61,8 +61,13 @@ export default extendTheme({
             border: "0",
             fontWeight: "500",
             _hover:{
+              bg:'none',
+              color:colors.aquamarine,
+              transition: 'all .6s ease'
+            },
+            _active:{
               bg:'none'
-            }
+            },
           },
           solid: {
             borderRadius: "10px",
@@ -152,6 +157,7 @@ export default extendTheme({
         }
       },
       Heading:{
+        cursor: 'default',
         variants:{
           primary:{
               fontWeight: '700',

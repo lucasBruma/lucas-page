@@ -27,7 +27,11 @@ const About = () => {
                 >
                     <Image src={foto} objectFit='cover' w='-webkit-fill-available;'/>
                 </Box>
-                <Text w={['100%',null,'70%']}>{htmlAboutme[context.language].about_me}</Text>
+                <VStack w={['100%',null,'70%']} fontSize='sm'>
+                    <Text>{htmlAboutme[context.language].about_me1}</Text>
+                    <Text>{htmlAboutme[context.language].about_me2}</Text>
+                    <Text>{htmlAboutme[context.language].contact}</Text>
+                </VStack>      
             </Stack>
         </VStack>
     );

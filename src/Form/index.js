@@ -11,6 +11,7 @@ function Form() {
     const form = React.useRef();
     const context = React.useContext(Context);
 
+
     const onSubmit = (e) =>{
           emailjs.sendForm('service_k46cms9', 'template_l71pywl', form.current, '-OucRu_7vgmbmb-2S')
             .then((result) => {
@@ -50,7 +51,7 @@ function Form() {
     }
 
     return ( 
-        <form ref={form} onSubmit={handleSubmit(onSubmit)} noValidate style={{ width: "70%" }}>
+        <form ref={form}  onSubmit={handleSubmit(onSubmit)} noValidate style={{ width: "70%" }}>
             <FormControl 
                 isInvalid={errors.email} 
                 display='flex' 
@@ -58,7 +59,7 @@ function Form() {
                 isRequired
                 position='relative'
             >   
-            <VStack width='100%' alignItems='flex-start'>
+            <VStack width='100%' alignItems='flex-start' >
                 <Stack direction={['column', null, 'row']} w='100%'>
                     {/* name */}
                     <Input
@@ -75,7 +76,7 @@ function Form() {
                         })}
                     />
                     {/* email */}
-                    <Input
+                    <Input 
                         id='user_email'
                         name="user_email"
                         type='email'
@@ -93,7 +94,7 @@ function Form() {
 
 
                 {/* Message */}
-                <Textarea
+                <Textarea 
                     id='message'
                     name='message'
                     placeholder={htmlAboutme[context.language].form.message}

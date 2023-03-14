@@ -80,9 +80,15 @@ const Modal = ({setIsOpen, isOpen}) => {
                     })}
                 </VStack>
                 <HStack spacing='3rem' fontSize='1.6rem'>
+                <a href='https://github.com/lucasBruma' target='blank'>
                     <FaGithub/>
+                </a>
+                <a href='https://www.linkedin.com/in/lucas-brumatti-50bb9a1b3/' target='blank'>
                     <FaLinkedin/>
+                </a>
+                <a href='mailto:lucasbrumatti99@gmail.com' target='blank'>
                     <AiFillMail/>
+                </a>
                 </HStack>
             </VStack> 
     );

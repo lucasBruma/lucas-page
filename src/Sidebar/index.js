@@ -35,8 +35,24 @@ const Sidebar = () => {
         p='20px 10px'
       >
         <VStack alignItems='flex-start' spacing='0'>
-          <Text fontWeight='700'>Lucas Brumatti</Text>
-          <Text fontSize='14px'>{htmlTitles[context.language].intro}</Text>
+          <Link 
+            to='home'
+            spy={true} 
+            smooth={true} 
+            offset={50} 
+            duration={500}
+          >
+              <Text fontWeight='700' cursor='pointer'>Lucas Brumatti</Text>
+          </Link>
+          <Link 
+            to='home'
+            spy={true} 
+            smooth={true} 
+            offset={50} 
+            duration={500}
+          >
+            <Text fontSize='14px' cursor='pointer'>{htmlTitles[context.language].intro}</Text> 
+          </Link>
         </VStack>
 
         <HStack>
@@ -84,9 +100,15 @@ const Sidebar = () => {
                 })}
         </VStack>
         <HStack spacing='1rem'>
-            <FaGithub/>
-            <FaLinkedin/>
-            <AiFillMail/>
+            <a href='https://github.com/lucasBruma' target='blank'>
+                <FaGithub/>
+            </a>
+            <a href='https://www.linkedin.com/in/lucas-brumatti-50bb9a1b3/' target='blank'>
+              <FaLinkedin/>
+            </a>
+            <a href='mailto:lucasbrumatti99@gmail.com' target='blank'>
+              <AiFillMail/>
+            </a>
         </HStack>
       </VStack>
     </Flex>
