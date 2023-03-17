@@ -9,8 +9,8 @@ import {
         ModalFooter,
         ModalBody,
         ModalCloseButton} from '@chakra-ui/react';
-import { htmlTitles } from '../resources/datos';
-import Context from "../Context/Context";
+import { htmlTitles } from '../../resources/data';
+import Context from "../../Context/Context";
 
 const ModalProject = ({ isOpen, onClose, title, description, demo}) => {
     const context = React.useContext(Context);

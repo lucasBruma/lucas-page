@@ -3,8 +3,8 @@ import { Box, Text,Icon, VStack, Flex, Heading, keyframes } from '@chakra-ui/rea
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Context from "../Context/Context";
-import { htmlTitles, skills } from '../resources/datos'
+import Context from "../../Context/Context";
+import { htmlTitles, skills } from '../../resources/data'
 
 const animationKeyframes = keyframes`
   0% { transform: scale(1) rotate(0); border-radius: 20%; }

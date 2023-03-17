@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Text, Button, Flex, Heading, keyframes, VStack } from '@chakra-ui/react';
-import Context from "../Context/Context";
-import { htmlTitles } from "../resources/datos.js";
-import fondoPortada from '../resources/images/fondoPortada.png'
+import Context from "../../Context/Context";
+import { htmlTitles } from "../../resources/data.js";
+import fondoPortada from '../../resources/images/fondoPortada.png'
 import {AiOutlineArrowDown} from 'react-icons/ai';
 import { Link, animateScroll as scroll } from "react-scroll";
 

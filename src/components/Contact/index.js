@@ -3,8 +3,8 @@ import { Text, Flex, Heading } from '@chakra-ui/react';
 import {Form} from '../Form'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Context from "../Context/Context";
-import { htmlAboutme } from '../resources/datos';
+import Context from "../../Context/Context";
+import { htmlAboutme } from '../../resources/data';
 
 const Contact = () => {
     const context = React.useContext(Context);

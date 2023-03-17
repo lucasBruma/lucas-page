@@ -1,8 +1,8 @@
 import {React, useEffect, useState, useRef, useContext, createElement} from 'react';
 import {VStack, Heading,HStack, Flex, Button, Input, Box } from '@chakra-ui/react';
-import Context from "../Context/Context";
+import Context from "../../Context/Context";
 import 'aos/dist/aos.css';
-import { htmlTitles } from '../resources/datos';
+import { htmlTitles } from '../../resources/data';
 import { IoMdSend } from 'react-icons/io';
 import { createPortal } from 'react-dom';
 import {AiFillCloseCircle,AiOutlineQuestion} from 'react-icons/ai';

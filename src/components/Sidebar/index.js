@@ -3,8 +3,8 @@ import { Text, HStack, VStack, Button, Flex } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { AiFillMail  } from 'react-icons/ai';
 import { Link, animateScroll as scroll } from "react-scroll";
-import Context from "../Context/Context";
-import { htmlTitles, sections } from '../resources/datos';
+import Context from "../../Context/Context";
+import { htmlTitles, sections } from '../../resources/data';
 
 const Sidebar = () => {
   const context = React.useContext(Context);

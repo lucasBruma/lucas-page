@@ -1,17 +1,16 @@
 import React from 'react';
-import {Sidebar} from './Sidebar';
-import {Homepage} from './Homepage';
-import { Proyectos } from './Proyectos';
-import {About} from './About';
-import {Skills} from './Skills';
-import {Contact} from './Contact';
+import {Sidebar} from './components/Sidebar';
+import {Homepage} from './components/Homepage';
+import { Projects } from './components/Projects';
+import {About} from './components/About';
+import {Skills} from './components/Skills';
+import {Contact} from './components/Contact';
+import { Modal } from './components/Modal';
+import { Chatbot } from './components/Chatbot';
+import Context from './Context/Context'
 import { Box, Button, Icon, VStack, Text, Link } from '@chakra-ui/react';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {IoMdClose} from 'react-icons/io';
-import { Modal } from './Modal';
-import { Chatbot } from './Chatbot';
-import Context from './Context/Context'
-
 
 const API_KEY = '6EMW4yuCqanWsjWLNEBZQ0gf85nxtjvViiZ9Ys4Q';
 
@@ -45,7 +44,7 @@ const ANSWERS = {
             message:`Although I don't have work experience, I've worked on several personal projects, as can be seen in the 'Projects' section. Currently, I'm looking for a job!`
         },
         es:{
-            message: `Aunque no tengo experiencia laboral, trabajé en varios proyectos personales, como los que se pueden apreciar en la seccion ‘Proyectos’. Actualmente estoy buscando trabajo!`
+            message: `Aunque no tengo experiencia laboral, trabajé en varios proyectos personales, como los que se pueden apreciar en la seccion ‘Projects’. Actualmente estoy buscando trabajo!`
         }
     },
     objetivos: {
@@ -204,7 +203,7 @@ const App = () => {
         }
         {isOpen && <Modal setIsOpen={setIsOpen} isOpen={isOpen}/>}
         <Homepage />
-        <Proyectos/>
+        <Projects />
         <About/>
         <Skills/>
         <Contact/>

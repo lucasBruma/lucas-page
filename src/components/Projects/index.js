@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDisclosure ,Collapse,VStack, Button, Heading, Grid } from '@chakra-ui/react';
-import { projectDetails } from '../resources/datos';
+import { projectDetails } from '../../resources/data';
 import {ProjectCard} from '../ProjectCard';
-import Context from "../Context/Context";
-import { htmlTitles } from "../resources/datos";
+import Context from "../../Context/Context";
+import { htmlTitles } from "../../resources/data";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Proyectos = () => {
+const Projects = () => {
     const context = React.useContext(Context);
 
     const { isOpen, onToggle } = useDisclosure()
@@ -51,4 +51,4 @@ const Proyectos = () => {
     );
 };
 
-export {Proyectos};
+export {Projects};

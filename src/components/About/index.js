@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Text, VStack, Heading, Stack, Image } from '@chakra-ui/react';
-import foto from '../resources/images/fotomia2BN.jpg'
-import { htmlAboutme } from '../resources/datos';
-import Context from "../Context/Context";
+import foto from '../../resources/images/fotomia2BN.jpg'
+import { htmlAboutme } from '../../resources/data';
+import Context from "../../Context/Context";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

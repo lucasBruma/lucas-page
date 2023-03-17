@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedin,  } from 'react-icons/fa';
 import { AiFillMail  } from 'react-icons/ai';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { motion } from 'framer-motion'
-import Context from "../Context/Context";
-import { sections } from '../resources/datos';
+import Context from "../../Context/Context";
+import { sections } from '../../resources/data';
 
 
 const Modal = ({setIsOpen, isOpen}) => {

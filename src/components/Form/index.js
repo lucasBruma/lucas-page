@@ -2,8 +2,8 @@ import React from 'react';
 import { Button,FormControl,Stack,Input,VStack,useToast,Textarea} from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import Context from "../Context/Context";
-import { htmlAboutme } from '../resources/datos';
+import Context from "../../Context/Context";
+import { htmlAboutme } from '../../resources/data';
 
 function Form() {
     const {register, formState:{errors}, handleSubmit} = useForm();
