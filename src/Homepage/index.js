@@ -16,7 +16,7 @@ const animationKeyframes = keyframes`
 const animation = `${animationKeyframes} 1.5s ease-in-out infinite`;
 
 
-const Portada = () => {
+const Homepage = () => {
     const context = React.useContext(Context);
 
     return (
@@ -37,6 +37,7 @@ const Portada = () => {
                 alignItems='flex-start' 
                 direction='column'
                 marginLeft={['2rem','2rem','auto']}
+                pb={['3rem','0','0']}
             >
                 <Text fontSize={['xl',null,'2xl']}>{htmlTitles[context.language].presentation_text}</Text>
                 <Heading variant='primary' mt='0' lineHeight='.9' fontSize={['6xl', null, 'auto']}>
@@ -68,17 +69,8 @@ const Portada = () => {
                 <Box animation={animation}>scroll down</Box>
                 <AiOutlineArrowDown/>
             </VStack>
-            <VStack 
-                position='absolute'
-                bottom='1rem'
-                spacing='3rem'
-                right='-20px'
-            >
-                <Box animation={animation}>scroll down</Box>
-                <AiOutlineArrowDown/>
-            </VStack>
         </Box>
     );
 };
 
-export {Portada};
+export {Homepage};
