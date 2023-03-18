@@ -90,8 +90,8 @@ const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
             </Button>
             <VStack 
                 border='1px solid gray' 
-                w='600px'
-                h='400px'
+                w={['300px',null,'600px']}
+                h={['500px',null,'400px']}
                 pt='1rem'
                 pb='1rem'
                 px='1rem'
@@ -112,8 +112,7 @@ const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
                         key={message.id}
                         bg={message.type === 'bot' ? '#232020' : '#181616'}
                         maxW='80%'
-                        px='2rem'
-                        py='2rem'
+                        p={['1rem', '2rem']}
                         alignSelf={message.type === 'bot' ? 'flex-start' : 'flex-end'}
                         borderRadius='3xl'
                         borderBottomLeftRadius={message.type === 'bot' && 'none'}

@@ -18,7 +18,7 @@ const ModalProject = ({ isOpen, onClose, title, description, demo}) => {
     return (
         <Modal isOpen={isOpen} onClose={onClose} >
         <ModalOverlay />
-        <ModalContent bgColor='red.veryDark'>
+        <ModalContent bgColor='red.veryDark' mx={['1rem', 'auto']}>
             <ModalHeader>{title}</ModalHeader>
             <ModalCloseButton />
             <ModalBody>

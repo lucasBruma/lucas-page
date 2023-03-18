@@ -12,7 +12,7 @@ import { Box, Button, Icon, VStack, Text, Link } from '@chakra-ui/react';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {IoMdClose} from 'react-icons/io';
 
-const API_KEY = '6EMW4yuCqanWsjWLNEBZQ0gf85nxtjvViiZ9Ys4Q';
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const ANSWERS = {
     default:{
