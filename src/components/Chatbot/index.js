@@ -90,7 +90,7 @@ const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
             </Button>
             <VStack 
                 border='1px solid gray' 
-                w={['300px',null,'600px']}
+                w={['330px',null,'600px']}
                 h={['500px',null,'400px']}
                 pt='1rem'
                 pb='1rem'
