@@ -198,7 +198,7 @@ export const htmlAboutme = {
             modal_message: 'Tu mensaje fue enviado correctamente. Te estaré respondiendo a la brevedad.',
             modal_error: 'El mensaje no fue enviado.',
             modal_email: 'Revisa tu email.',
-            modal_required: 'Recorda que todos los campos son requeridos.'
+            modal_required: 'Este campo es obligatorio.'
         }
     },
     en: {
@@ -217,7 +217,7 @@ export const htmlAboutme = {
             modal_message: 'Your message was sent successfully. I will answer as soon as possible.',
             modal_error: 'The email was not sent.',
             modal_email: 'Check your email.',
-            modal_required: "Remember that every field is required.",
+            modal_required: "This field is required.",
         }
     },
 }
