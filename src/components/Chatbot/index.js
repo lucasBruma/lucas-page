@@ -121,6 +121,18 @@ const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
                         {message.text}
                     </Flex>
                 ))}  
+                    {isLoading && 
+                        <Flex
+                            bg='#232020'
+                            maxW='80%'
+                            p={['1rem', '2rem']}
+                            alignSelf='flex-start'
+                            borderRadius='3xl'
+                            borderBottomLeftRadius='none'
+                        >
+                            {htmlTitles[context.language].loading__chatbot}
+                        </Flex>
+                    }
                 </VStack>
       
                 <form onSubmit={handleSubmit} noValidate style={{ width: "100%" }}>
