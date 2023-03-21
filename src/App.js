@@ -16,7 +16,8 @@ import { EXAMPLES } from './utils/examples';
 import { ANSWERS } from './utils/answers';
  
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+// const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = 'J8RW4gATO0DzsOi2cSzmVJRtZF5UFnhX9pF9ioY2';
 
 const App = () => {
   const initialState = window.innerWidth < 768 ? false : true;
