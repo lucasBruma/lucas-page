@@ -46,6 +46,8 @@ const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
 
         setIsLoading(false)
 
+        console.log(classifications)
+
         const answer = !ANSWERS[classifications[0].prediction] 
         ? ANSWERS['default'][context.language].message 
         : ANSWERS[classifications[0].prediction][context.language].message;
