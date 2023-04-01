@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+Hola!!
+(Please note that below the Spanish Readme, you will find the English version of this document.)
+Este es mi portfolio, una página web creada con React.js y ChakraUI. En ella, muestro mis proyectos, hablo sobre mí y ofrezco la posibilidad de interactuar con un chatbot de IA que responde preguntas acerca de mí. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tecnologías utilizadas
+React.js: biblioteca de JavaScript para la creación de interfaces de usuario.
+ChakraUI: biblioteca de componentes de interfaz de usuario para React.js.
 
-## Available Scripts
+Funcionalidades
+Muestra de mis proyectos: en mi Portfolio Web, podrás encontrar una selección de los proyectos en los que he trabajado, con enlaces a sus respectivos repositorios en GitHub.
+Hablo sobre mí: también encontrarás una sección donde hablo sobre mis habilidades.
+Chatbot de IA: la sección más innovadora de mi Portfolio Web es el chatbot de IA que he creado para interactuar con los visitantes. Utilizando la API de co:here, he entrenado al chatbot para responder preguntas acerca de mí y mi experiencia profesional.
 
-In the project directory, you can run:
+Cómo utilizar mi Portfolio Web
+Para utilizar mi Portfolio Web, simplemente accede a la URL de la página. Una vez cargada, podrás navegar por las diferentes secciones de la página utilizando el menú de navegación situado en la parte superior. Si deseas interactuar con el chatbot de IA, simplemente haz clic en el botón correspondiente ('?') y comienza a hacer tus preguntas.
 
-### `npm start`
+Contribuir al proyecto
+Si deseas contribuir al desarrollo de mi Portfolio Web, no dudes en contactarme. Estoy abierto a sugerencias y colaboraciones.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Autor
+Mi nombre es Lucas Brumatti, y soy el creador de este Portfolio Web. Si deseas contactarme, puedes hacerlo a través de mi página web o a través de mis redes sociales.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+¡Gracias por visitar mi Portfolio Web!
 
-### `npm test`
+#English version
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is my portfolio, a webpage created with React.js and ChakraUI. It showcases my projects, talks about me, and offers the possibility to interact with an AI chatbot that answers questions about me.
 
-### `npm run build`
+Technologies Used
+React.js: a JavaScript library for building user interfaces.
+ChakraUI: a UI component library for React.js.
+Functionality
+Showcases my projects: on my Portfolio Web, you'll find a selection of the projects I have worked on, with links to their respective repositories on GitHub.
+Talks about me: you'll also find a section where I talk about my professional experience and my skills.
+AI Chatbot: the most innovative section of my Portfolio Web is the AI chatbot I have created to interact with visitors. Using the co:here API, I have trained the chatbot to answer questions about me and my professional experience.
+How to use my Portfolio Web
+To use my Portfolio Web, simply access the webpage's URL. Once loaded, you can navigate through the different sections of the webpage using the navigation menu located at the top. If you want to interact with the AI chatbot, simply click on the corresponding button ('?') and start asking your questions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributing to the Project
+If you want to contribute to the development of my Portfolio Web, don't hesitate to contact me. I am open to suggestions and collaborations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Author
+My name is Lucas Brumatti, and I am the creator of this Portfolio Web. If you want to contact me, you can do so through my webpage or through my social media.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for visiting my Portfolio Web!
