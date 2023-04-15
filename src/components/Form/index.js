@@ -82,7 +82,6 @@ function Form() {
                                 {errors.user_email.type == 'required' && htmlAboutme[context.language].form.modal_required}
                                 {errors.user_email.type == 'pattern' && htmlAboutme[context.language].form.modal_email}
                             </Text>}
-                        {console.log(errors)}
                     </VStack>
 
                 </Stack>
