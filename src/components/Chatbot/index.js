@@ -31,7 +31,8 @@ const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
         setMessages((messages)=> messages.concat({id:Date.now(), type: "user", text: question}))
         setQuestion("")
 
-        const {classifications} = await fetch('https://api.cohere.ai/v1/classify',{
+        try{
+            const {classifications} = await fetch('https://api.cohere.ai/v1/classify',{
             method: 'POST',
             headers:{
                 Authorization:`Bearer ${API_KEY}`,
@@ -41,17 +42,22 @@ const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
                 model: 'large',
                 inputs: [question],
                 examples: EXAMPLES
-            })
-        }).then(res => res.json())
+                })
+            }).then(res => res.json())
 
-        setIsLoading(false)
+            setIsLoading(false)
 
-        const answer = !ANSWERS[classifications[0].prediction] 
-        ? ANSWERS['default'][context.language].message 
-        : ANSWERS[classifications[0].prediction][context.language].message;
+            const answer = !ANSWERS[classifications[0].prediction] 
+            ? ANSWERS['default'][context.language].message 
+            : ANSWERS[classifications[0].prediction][context.language].message;
 
-        setMessages((messages)=> messages.concat({id:Date.now(), type: "bot", text: answer}))
-        setQuestion("")
+            setMessages((messages)=> messages.concat({id:Date.now(), type: "bot", text: answer}))
+            setQuestion("")
+        }catch(e){
+            console.log(e)
+        }
+
+        
     };
 
     useEffect(()=>{
