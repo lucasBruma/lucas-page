@@ -5,7 +5,8 @@ import 'aos/dist/aos.css';
 import { htmlTitles } from '../../resources/data';
 import { IoMdSend } from 'react-icons/io';
 import { createPortal } from 'react-dom';
-import {AiFillCloseCircle,AiOutlineQuestion} from 'react-icons/ai';
+import {AiFillCloseCircle} from 'react-icons/ai';
+import {BsFillChatLeftFill} from 'react-icons/bs'
 
 
 const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
@@ -78,7 +79,7 @@ const Chatbot = ({API_KEY, ANSWERS, EXAMPLES}) => {
                 right='1rem'
                 variant='solid'
             >
-                <AiOutlineQuestion/>
+                <BsFillChatLeftFill />
             </Button>
             )
         :
