@@ -5,7 +5,7 @@ import {AiFillTrophy, AiFillHtml5} from 'react-icons/ai';
 import {RiLockPasswordFill} from 'react-icons/ri';
 import {TiWeatherPartlySunny} from 'react-icons/ti';
 import {IoLogoCss3, IoLogoJavascript,IoLogoSass} from 'react-icons/io';
-import {SiChakraui} from 'react-icons/si';
+import {SiChakraui, SiTypescript} from 'react-icons/si';
 import {FaReact,FaRegHandshake} from 'react-icons/fa';
 import {MdOutlineBusinessCenter,MdGTranslate} from 'react-icons/md';
 
@@ -134,7 +134,7 @@ export const projectDetails = [
         id: "2_agency-posts",
         img_dark_theme: MdOutlineBusinessCenter,
         link: "https://agency-posts.vercel.app/",
-        technologies: ['React.js', 'ChakraUI'],
+        technologies: ['React.js', 'ChakraUI', 'Node.js', 'Express'],
         repository: "https://github.com/lucasBruma/agency-posts",
         preview: previewManage,
         es: {
@@ -150,7 +150,7 @@ export const projectDetails = [
         id: "3_google-translate-clon",
         img_dark_theme: MdGTranslate,
         link: "https://clon-google-translate.vercel.app/",
-        technologies: ['React.js', 'Typescript'],
+        technologies: ['React.js', 'Typescript', 'Node.js', 'Express'],
         repository: "https://github.com/lucasBruma/clon-google-translate",
         preview: previewManage,
         es: {
@@ -300,6 +300,10 @@ export const skills = [
     {
         nombre: 'ChakraUI',
         logo: SiChakraui
+    },
+    {
+        nombre: 'Typescript',
+        logo: SiTypescript
     }
 ]
 

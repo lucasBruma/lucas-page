@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Card, Text,Heading,
         Icon, CardFooter, CardHeader,
         Tag, Container, VStack, Button,
-        Link, useDisclosure} from '@chakra-ui/react';
+        Link, useDisclosure, Wrap, Flex} from '@chakra-ui/react';
 import { ModalProject } from './ModalProject';
 
 const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
@@ -47,11 +47,11 @@ const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
                 <Box w='6rem' h='6rem'>
                     <Icon as={image} w='100%' h='100%'></Icon> 
                 </Box>
-                <CardFooter gap='10px'>
-                    {techs.map((tech, index)=>{
-                        return <Tag key={index}>{tech}</Tag>
+                <Flex flexWrap={'wrap'} gap='10px' maxH='100px' maxW={'200px'} py='15px' justifyContent='center'>
+                    {techs.map((tech, index) => {
+                        return <Tag key={index}>{tech}</Tag>;
                     })}
-                </CardFooter>
+                </Flex>
             </Card>
             {/* back */}
             <Card 
