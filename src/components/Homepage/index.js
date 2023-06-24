@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, Text, Button, Flex, Heading, keyframes, VStack } from '@chakra-ui/react';
+import { Box, Text, Button, Flex, Heading, keyframes, VStack, HStack } from '@chakra-ui/react';
 import Context from "../../Context/Context";
 import { htmlTitles } from "../../resources/data.js";
 import fondoPortada from '../../resources/images/fondoPortada.png'
 import {AiOutlineArrowDown} from 'react-icons/ai';
 import { Link, animateScroll as scroll } from "react-scroll";
+import {HiOutlineDownload} from 'react-icons/hi'
 
 
 const animationKeyframes = keyframes`
@@ -15,6 +16,7 @@ const animationKeyframes = keyframes`
 
 const animation = `${animationKeyframes} 1.5s ease-in-out infinite`;
 
+const pdfUrl = 'https://www.lucasbrumatti.com/CV-en-Lucas_Brumatti-Front.pdf'
 
 const Homepage = () => {
     const context = React.useContext(Context);
@@ -48,17 +50,30 @@ const Homepage = () => {
                         {htmlTitles[context.language].intro}
                     <Box as='span'>&lt;/p&gt;</Box>
                 </Text>
-                <Link
-                    to='contact'
-                    spy={true} 
-                    smooth={true} 
-                    offset={50} 
-                    duration={500}
-                >
-                    <Button variant='solid' mt='2rem'>
-                        {htmlTitles[context.language].button__contact}
-                    </Button>
-                </Link>
+                    
+                    <HStack gap='.5rem' alignItems='flex-end'>
+                        
+                        <Link
+                            to='contact'
+                            spy={true} 
+                            smooth={true} 
+                            offset={50} 
+                            duration={500}
+                        >
+                            <Button variant='solid' mt='2rem'>
+                                {htmlTitles[context.language].button__contact}
+                            </Button>
+                        </Link>
+                        <Button variant='solid' mt='2rem'>
+                            <a href={pdfUrl} download> 
+                                <HStack alignItems='center' gap='2px'>
+                                    <Text>CV</Text>
+                                    <HiOutlineDownload/>  
+                                </HStack>
+                            </a> 
+                        </Button>             
+                    </HStack>
+
             </Flex>
             <VStack 
                 position='absolute'

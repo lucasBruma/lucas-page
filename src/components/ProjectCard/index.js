@@ -20,7 +20,7 @@ const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
             _hover={{
                 transform: 'rotateY(-180deg)'
             }}
-            transition='1.3s'
+            transition='.7s'
             >
             {/* front */}
             <Card 

@@ -6,7 +6,8 @@ import {RiLockPasswordFill} from 'react-icons/ri';
 import {TiWeatherPartlySunny} from 'react-icons/ti';
 import {IoLogoCss3, IoLogoJavascript,IoLogoSass} from 'react-icons/io';
 import {SiChakraui} from 'react-icons/si';
-import {FaReact} from 'react-icons/fa';
+import {FaReact,FaRegHandshake} from 'react-icons/fa';
+import {MdOutlineBusinessCenter,MdGTranslate} from 'react-icons/md';
 
 import previewManage from '../resources/images/manage.png';
 import previewBookmark from '../resources/images/bookmark.png';
@@ -14,7 +15,8 @@ import previewCountries from '../resources/images/countries.png';
 import previewPassword from '../resources/images/password.png';
 import previewWeather from '../resources/images/weather.png';
 import previewWorldCup from '../resources/images/worldcup.png';
-import previewCripto from '../resources/images/cripto.png'
+import previewCripto from '../resources/images/cripto.png';
+import previewMeli from '../resources/images/meli.png'; 
 
 
 export const sections = [{
@@ -65,6 +67,22 @@ export const sections = [{
 
 export const projectDetails = [
     {
+        id: "1_clon-ml",
+        img_dark_theme: FaRegHandshake,
+        link: "https://mercadolibre-details-challenge-two.vercel.app/",
+        technologies: ['React.js', 'Typescript'],
+        repository: "https://github.com/lucasBruma/mercadolibre-details-challenge",
+        preview: previewMeli,
+        es: {
+            title: 'Clon de Mercado Libre',
+            description: 'Desarrollé la vista de detalle de producto de ML.'
+        },
+        en: {
+            title: "Mercado Libre Clone",
+            description: 'I developed the product detail view for Mercado Libre.',
+        }
+    },
+    {
         id: "1_manage-landing",
         img_dark_theme: GoGraph,
         link: "https://manage-landing-page-three-ecru.vercel.app/",
@@ -110,6 +128,38 @@ export const projectDetails = [
         en: {
             title: "Info Countries",
             description: "A website that provides information about all the countries. They can be filtered by continent or through a search bar. Additionally, more detailed information about each country can be observed."
+        }
+    },
+    {
+        id: "2_agency-posts",
+        img_dark_theme: MdOutlineBusinessCenter,
+        link: "https://agency-posts.vercel.app/",
+        technologies: ['React.js', 'ChakraUI'],
+        repository: "https://github.com/lucasBruma/agency-posts",
+        preview: previewManage,
+        es: {
+            title: 'Agency Posts',
+            description: 'Proyecto enfocado a las agencias digitales. Genera 10 posts para instagram dado un prompt. Usé Openai API y Pexels API'
+        },
+        en: {
+            title: "Agency Posts",
+            description: 'Project focused on digital agencies. Generates 10 Instagram posts given a prompt. I used the OpenAI API and the Pexels API',
+        }
+    },
+    {
+        id: "3_google-translate-clon",
+        img_dark_theme: MdGTranslate,
+        link: "https://clon-google-translate.vercel.app/",
+        technologies: ['React.js', 'Typescript'],
+        repository: "https://github.com/lucasBruma/clon-google-translate",
+        preview: previewManage,
+        es: {
+            title: 'Clon de google translate',
+            description: 'Este proyecto es un clon de la famosa herramienta de traducción de Google, pero con la particularidad de que utiliza inteligencia artificial para hacer las traducciones. Para lograrlo, se utiliza la API de OpenAI.'
+        },
+        en: {
+            title: "Google translate clone",
+            description: 'This project is a clone of the famous Google translation tool, but with the particularity that it uses artificial intelligence for translations. To achieve this, the OpenAI API is used.',
         }
     },
     {
