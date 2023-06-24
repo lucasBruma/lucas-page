@@ -8,7 +8,11 @@ import { ModalProject } from './ModalProject';
 
 const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [rotateCard, setRotateCard] = React.useState(false);
 
+    const handleClick = () => {
+        setRotateCard(!rotateCard);
+    }
 
     return (
         <Box position='relative' 
@@ -17,9 +21,9 @@ const ProjectCard = ({ title, image, techs, bg, demo, repo, description}) => {
                 transformStyle:'preserve-3d',
                 perspective: "2000px"
             }}
-            _hover={{
-                transform: 'rotateY(-180deg)'
-            }}
+            cursor='pointer'
+            transform={rotateCard && 'rotateY(-180deg)'}
+            onClick={handleClick}
             transition='.7s'
             >
             {/* front */}
