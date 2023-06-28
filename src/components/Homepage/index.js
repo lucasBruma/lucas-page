@@ -41,11 +41,11 @@ const Homepage = () => {
                 marginLeft={['2rem','2rem','auto']}
                 pb={['3rem','0','0']}
             >
-                <Text fontSize={['xl',null,'2xl']}>{htmlTitles[context.language].presentation_text}</Text>
-                <Heading variant='primary' mt='0' lineHeight='.9' fontSize={['6xl', null, 'auto']}>
+                <Text fontSize={['xl',null,'2xl',null,null, '4xl']}>{htmlTitles[context.language].presentation_text}</Text>
+                <Heading variant='primary' mt='0' lineHeight='.9' fontSize={['6xl', null, 'auto',null, '7xl']}>
                     <Box as='span' color='aquamarine'>L</Box>ucas <Box as='span' color='aquamarine'>B</Box>rumatti
                 </Heading>
-                <Text fontSize={['xl',null,'2xl']} w={['65%',null,'100%']} mt='.8rem'>
+                <Text fontSize={['xl',null,'2xl',null,null,'4xl']} w={['65%',null,'100%']} mt='.8rem'>
                     <Box as='span'>&lt;p&gt;</Box>
                         {htmlTitles[context.language].intro}
                     <Box as='span'>&lt;/p&gt;</Box>

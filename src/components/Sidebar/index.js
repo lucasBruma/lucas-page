@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, HStack, VStack, Button, Flex } from '@chakra-ui/react';
+import { Text, HStack, Stack, VStack, Button, Flex, Icon } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { AiFillMail  } from 'react-icons/ai';
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -78,7 +78,7 @@ const Sidebar = () => {
         w='100%'
         justifyContent='space-around'
       >
-        <VStack spacing='1rem' alignItems='flex-start' w='107px'>
+        <VStack spacing={['1rem',null,null,null,null,'2rem']} alignItems='flex-start' w='107px'>
             {sections.map((section, index)=>{
                 return <Link 
                         key={index} 
@@ -99,17 +99,17 @@ const Sidebar = () => {
                     </Link>
                 })}
         </VStack>
-        <HStack spacing='1rem'>
+        <Stack direction={['row',null,null,null,null,'column']} spacing='1rem' alignItems={'center'}>
             <a href='https://github.com/lucasBruma' target='blank'>
-                <FaGithub/>
+              <Icon as={FaGithub} w={6} h={6} color='white'/>
             </a>
             <a href='https://www.linkedin.com/in/lucas-brumatti-50bb9a1b3/' target='blank'>
-              <FaLinkedin/>
+              <Icon as={FaLinkedin} w={6} h={6} color='white'/>
             </a>
             <a href='mailto:lucasbrumatti99@gmail.com' target='blank'>
-              <AiFillMail/>
+              <Icon as={AiFillMail} w={6} h={6} color='white'/>
             </a>
-        </HStack>
+        </Stack>
       </VStack>
     </Flex>
   );
