@@ -2,22 +2,24 @@ import { BsFillBookmarkFill,BsCurrencyBitcoin,BsGit} from 'react-icons/bs';
 import {GoGraph} from 'react-icons/go';
 import {BiWorld} from 'react-icons/bi';
 import {AiFillTrophy, AiFillHtml5} from 'react-icons/ai';
-import {RiLockPasswordFill} from 'react-icons/ri';
 import {TiWeatherPartlySunny} from 'react-icons/ti';
 import {IoLogoCss3, IoLogoJavascript,IoLogoSass} from 'react-icons/io';
-import {SiChakraui, SiTypescript} from 'react-icons/si';
+import {SiChakraui, SiTypescript, SiNextdotjs, SiTailwindcss} from 'react-icons/si';
 import {FaReact,FaRegHandshake} from 'react-icons/fa';
-import {MdOutlineBusinessCenter,MdGTranslate} from 'react-icons/md';
+import {MdOutlineBusinessCenter,MdGTranslate,MdRestaurantMenu} from 'react-icons/md';
+import {TbTicTac} from 'react-icons/tb';
 
 import previewManage from '../resources/images/manage.png';
 import previewBookmark from '../resources/images/bookmark.png';
 import previewCountries from '../resources/images/countries.png';
-import previewPassword from '../resources/images/password.png';
 import previewWeather from '../resources/images/weather.png';
 import previewWorldCup from '../resources/images/worldcup.png';
 import previewCripto from '../resources/images/cripto.png';
 import previewMeli from '../resources/images/meli.png'; 
-
+import previewTateti from '../resources/images/tateti.png';
+import previewMorfi from '../resources/images/morfi.png';
+import previewTraductor from '../resources/images/traductor.png'
+import previewPosts from '../resources/images/posts.png';   
 
 export const sections = [{
     href: 'home',
@@ -86,7 +88,7 @@ export const projectDetails = [
         id: "1_manage-landing",
         img_dark_theme: GoGraph,
         link: "https://manage-landing-page-three-ecru.vercel.app/",
-        technologies: ['React.js', 'ChakraUI'],
+        technologies: ['React.js', 'Javascript', 'ChakraUI'],
         repository: "https://github.com/lucasBruma/manage-landing-page",
         preview: previewManage,
         es: {
@@ -96,6 +98,70 @@ export const projectDetails = [
         en: {
             title: "Manage Landing Page",
             description: 'It is a Frontend Mentor Challenge where, based on given prompts and a provided design, I had to develop the project using the technologies of my choice. In this case, I chose React.js and ChakraUI which allowed me to speed up the development process significantly. It was quite entertaining and I believe the final result is quite faithful to the original design.',
+        }
+    },
+    {
+        id: "2_agency-posts",
+        img_dark_theme: MdOutlineBusinessCenter,
+        link: "https://agency-posts.vercel.app/",
+        technologies: ['React.js', 'ChakraUI', 'Node.js', 'Express'],
+        repository: "https://github.com/lucasBruma/agency-posts",
+        preview: previewPosts,
+        es: {
+            title: 'Agency Posts',
+            description: 'Proyecto enfocado a las agencias digitales. Genera 10 posts para instagram dado un prompt. Usé Openai API y Pexels API'
+        },
+        en: {
+            title: "Agency Posts",
+            description: 'Project focused on digital agencies. Generates 10 Instagram posts given a prompt. I used the OpenAI API and the Pexels API',
+        }
+    },
+    {
+        id: "2_morfi",
+        img_dark_theme:  MdRestaurantMenu,
+        link: "https://nocountry-vercel.vercel.app/",
+        technologies: ['React.js','Javascript','Tailwind'],
+        repository: "https://github.com/No-Country/c11-34-ft-react-nodeJS",
+        preview: previewMorfi,
+        es: {
+            title: 'Morfi app',
+            description: 'Morfi es una plataforma web diseñada para facilitar y agilizar el proceso de reservas en mesas de restaurantes en Argentina. En este proyecto colabore junto a otros programadores y diseñadores.'
+        },
+        en: {
+            title: "Morfi app",
+            description: "Morfi is a web platform designed to facilitate and accelerate the process of reservations in restaurant tables in Argentina. In this project, I collaborate with other programmers and designers"
+        }
+    },
+    {
+        id: "3_google-translate-clon",
+        img_dark_theme: MdGTranslate,
+        link: "https://clon-google-translate.vercel.app/",
+        technologies: ['React.js', 'Typescript', 'Node.js', 'Express'],
+        repository: "https://github.com/lucasBruma/clon-google-translate",
+        preview: previewTraductor,
+        es: {
+            title: 'Clon de google translate',
+            description: 'Este proyecto es un clon de la famosa herramienta de traducción de Google, pero con la particularidad de que utiliza inteligencia artificial para hacer las traducciones. Para lograrlo, se utiliza la API de OpenAI.'
+        },
+        en: {
+            title: "Google translate clone",
+            description: 'This project is a clone of the famous Google translation tool, but with the particularity that it uses artificial intelligence for translations. To achieve this, the OpenAI API is used.',
+        }
+    },
+    {
+        id: "3_tictactoe",
+        img_dark_theme: TbTicTac,
+        link: "https://ta-te-ti-tau.vercel.app/",
+        technologies: ['React.js', 'Javascript','Tailwind'],
+        repository: "https://github.com/lucasBruma/ta-te-ti",
+        preview: previewTateti,
+        es: {
+            title: 'Ta te ti',
+            description: 'Juego de Ta Te Ti. Se guarda info del tablero y del turno en localStorage.'
+        },
+        en: {
+            title: "Tic tac toe",
+            description: "Tic tac toe game. It saves the board and the turn in localStorage"
         }
     },
     {
@@ -131,54 +197,6 @@ export const projectDetails = [
         }
     },
     {
-        id: "2_agency-posts",
-        img_dark_theme: MdOutlineBusinessCenter,
-        link: "https://agency-posts.vercel.app/",
-        technologies: ['React.js', 'ChakraUI', 'Node.js', 'Express'],
-        repository: "https://github.com/lucasBruma/agency-posts",
-        preview: previewManage,
-        es: {
-            title: 'Agency Posts',
-            description: 'Proyecto enfocado a las agencias digitales. Genera 10 posts para instagram dado un prompt. Usé Openai API y Pexels API'
-        },
-        en: {
-            title: "Agency Posts",
-            description: 'Project focused on digital agencies. Generates 10 Instagram posts given a prompt. I used the OpenAI API and the Pexels API',
-        }
-    },
-    {
-        id: "3_google-translate-clon",
-        img_dark_theme: MdGTranslate,
-        link: "https://clon-google-translate.vercel.app/",
-        technologies: ['React.js', 'Typescript', 'Node.js', 'Express'],
-        repository: "https://github.com/lucasBruma/clon-google-translate",
-        preview: previewManage,
-        es: {
-            title: 'Clon de google translate',
-            description: 'Este proyecto es un clon de la famosa herramienta de traducción de Google, pero con la particularidad de que utiliza inteligencia artificial para hacer las traducciones. Para lograrlo, se utiliza la API de OpenAI.'
-        },
-        en: {
-            title: "Google translate clone",
-            description: 'This project is a clone of the famous Google translation tool, but with the particularity that it uses artificial intelligence for translations. To achieve this, the OpenAI API is used.',
-        }
-    },
-    {
-        id: "4_password",
-        img_dark_theme: RiLockPasswordFill,
-        link: "https://lucasbruma.github.io/generadorPasswords/",
-        technologies: ['HTML', 'CSS', 'JS'],
-        repository: "https://github.com/lucasBruma/generadorPasswords",
-        preview: previewPassword,
-        es: {
-            title: 'Generador de contraseñas',
-            description: 'Genera contraseñas aleatorias. Se pueden personalizar'
-        },
-        en: {
-            title: "Password generator",
-            description: 'It generates random passwords and can be customized',
-        }
-    },
-    {
         id: "5_weather",
         img_dark_theme: TiWeatherPartlySunny,
         link: "https://lucasbruma.github.io/weatherApp/",
@@ -193,50 +211,17 @@ export const projectDetails = [
             title: "Weather App",
             description: "Check the weather in your city and some others.",
         }
-    },
-    {
-        id: "6_worldCup",
-        img_dark_theme: AiFillTrophy,
-        link: "https://pronosticador-mundial2022.netlify.app/matches.html",
-        technologies: ['HTML', 'CSS', 'JS'],
-        repository: "https://github.com/lucasBruma/pronostico-mundial",
-        preview: previewWorldCup,
-        es: {
-            title: "Pronóstico para el mundial 2022",
-            description: "Es un juego para predecir el campéon. También tiene un apartado con los resultados.",
-        },
-        en: {
-            title: "World cup predictor",
-            description: "It is a game to predict the champion and also has a section with the results.",
-        }
-    },
-
-    {
-        id: "7_cripto",
-        img_dark_theme: BsCurrencyBitcoin,
-        link: "https://lucasbruma.github.io/marketCap-cotizacion/index.html",
-        technologies: ['HTML', 'CSS', 'JS'],
-        repository: "https://github.com/lucasBruma/marketCap-cotizacion",
-        preview: previewCripto,
-        es: {
-            title: "Proyecto cripto",
-            description: "Lista de 25 criptos con mayor market cap y cotizacion de algunas cripto en monedas FIAT.",
-        },
-        en: {
-            title: "Crypto project",
-            description: `List of the 25 cryptos by market cap. And also the price of some cryptos in three FIAT currencies`,
-        }
     }
 ]
+
 
 export const htmlAboutme = {
     es: {
         title_about: 'Sobre mi',
-        about_me1: `Soy un desarrollador front-end de 20 años viviendo en Buenos Aires, Argentina. Aparte de la universidad, me encanta aprender a través de cursos online (en plataformas como Platzi) y de proyectos personales que me permiten experimentar y desafiarme a mí mismo.
-        `,
-        about_me2: `Me considero una persona bien organizada, solucionadora de problemas y con gran atención al detalle. Soy un apasionado por el desarrollo, y me encantaría trabajar en equipo para crear soluciones innovadoras y de calidad. Siempre estoy buscando nuevos retos y oportunidades para crecer como programador. 
-        `,
-        contact: `Asi que si querés contactarme, podés escribirme un correo o completar el formulario que se encuentra  acá abajo!`,
+        about_me1:`Buenas! Soy Lucas, desarrollador frontend argentino en búsqueda de poder dar mis primeros pasos en el mundo Tech. 🚀`,
+        about_me2: ` He desarrollado distintos proyectos con las tecnologías mencionadas en el apartado de skills, siempre tratando de implementar las mejores prácticas. También formé parte de la Cohorte 11 de No Country, experiencia muy valiosa que me permitió colaborar en equipo para sacar adelante un proyecto muy interesante (Morfi App).
+        💪 Nunca me canso de aprender y estoy inscripto en plataformas como Platzi para seguir mejorando mis habilidades en desarrollo web. `,
+        contact: `Si querés contactarme, podés escribirme un correo o completar el formulario que se encuentra acá abajo!`,
         title_contact: 'Contacto',
         form: {
             required_message: '(Todos los campos son obligatorios)',
@@ -253,9 +238,10 @@ export const htmlAboutme = {
     },
     en: {
         title_about: 'About me',
-        about_me1: `I am a 20-year-old front-end developer living in Buenos Aires, Argentina. Since my first contact with programming in high school, I knew it was what I wanted to do. Apart from university, I love learning through online courses (on platforms such as Platzi) and personal projects that allow me to experiment and challenge myself.`,
-        about_me2: `I consider myself a well-organized person, problem solver, and detail-oriented. Some of my hobbies include football, working out, and reading. I am passionate about development and would love to work in a team to create innovative and quality solutions. I am always looking for new challenges and opportunities to grow as a developer.`,
-        contact: `So, if you want to reach me, you can write me an email, or fill out the form below.`,
+        about_me1: `Hello! I'm Lucas, an Argentinian frontend developer looking forward to give my first steps in Tech. 🚀`,
+        about_me2: `I've developed different projects with the technologies mentioned in the skills section, always trying to implement the best practices. Also I was part of the Cohort 11 of No Country, a very valuable experience that I've gained in collaborating with other developers to get a project that is very interesting (Morfi App).
+        💪 I never stop learning and I'm enrolled in platforms like Platzi to keep improving my skills in web development.`,
+        contact: `If you want to contact me, you can write me an email, or fill out the form below.`,
         title_contact: 'Contact',
         form: {
             required_message: '(All fields required)',
@@ -304,6 +290,15 @@ export const skills = [
     {
         nombre: 'Typescript',
         logo: SiTypescript
+    },
+    {
+        nombre:'Tailwind',
+        logo: SiTailwindcss
+    },
+    {
+        nombre: 'Next.js',
+        logo: SiNextdotjs
+    
     }
 ]
 

@@ -24,10 +24,11 @@ const About = () => {
                     border='1px solid white'
                     overflow='hidden'
                     w={['100%',null,'30%', null, null,'50%']}
+                    maxH={'600px'}
                 >
                     <Image src={foto} objectFit='cover' w='-webkit-fill-available;'/>
                 </Box>
-                <VStack w={['100%',null,'70%', null, null,'50%']}  fontSize={['sm',null,null,null,null,'25px']} alignItems={'baseline'}>
+                <VStack w={['100%',null,'70%', null, null,'50%']}  fontSize={['sm',null,null,null,null,'22px']} alignItems={'baseline'}>
                     <Text>{htmlAboutme[context.language].about_me1}</Text>
                     <Text>{htmlAboutme[context.language].about_me2}</Text>
                     <Text>{htmlAboutme[context.language].contact}</Text>

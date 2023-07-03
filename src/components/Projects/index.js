@@ -19,7 +19,7 @@ const Projects = () => {
             <Heading variant='section'  data-aos='flip-down'>{htmlTitles[context.language].title_projects}</Heading>
             <Grid templateColumns={['repeat(1, 1fr)',null,'repeat(3, 1fr)']} autoRows='315px' gap={4} width='80%' data-aos='fade-right'>
                 {projectDetails.map((project, index)=>{
-                    if(index<3){
+                    if(index<6){
                         return <ProjectCard 
                                     title={project[context.language].title} 
                                     image={project.img_dark_theme} 
