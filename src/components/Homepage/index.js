@@ -16,7 +16,7 @@ const animationKeyframes = keyframes`
 
 const animation = `${animationKeyframes} 1.5s ease-in-out infinite`;
 
-const pdfUrl = 'https://www.lucasbrumatti.com/CV-en-Lucas_Brumatti-Front.pdf'
+const pdfUrl = 'https://www.lucasbrumatti.com/CV-en-Lucas_Brumatti-Frontend.pdf'
 
 const Homepage = () => {
     const context = React.useContext(Context);
