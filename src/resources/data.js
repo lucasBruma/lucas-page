@@ -1,10 +1,10 @@
-import { BsFillBookmarkFill,BsCurrencyBitcoin,BsGit} from 'react-icons/bs';
+import { BsFillBookmarkFill,BsGit} from 'react-icons/bs';
 import {GoGraph} from 'react-icons/go';
-import {BiWorld} from 'react-icons/bi';
-import {AiFillTrophy, AiFillHtml5} from 'react-icons/ai';
+import {BiWorld,BiCameraMovie} from 'react-icons/bi';
+import { AiFillHtml5} from 'react-icons/ai';
 import {TiWeatherPartlySunny} from 'react-icons/ti';
 import {IoLogoCss3, IoLogoJavascript,IoLogoSass} from 'react-icons/io';
-import {SiChakraui, SiTypescript, SiNextdotjs, SiTailwindcss} from 'react-icons/si';
+import {SiChakraui, SiTypescript, SiNextdotjs, SiTailwindcss,SiStyledcomponents} from 'react-icons/si';
 import {FaReact,FaRegHandshake} from 'react-icons/fa';
 import {MdOutlineBusinessCenter,MdGTranslate,MdRestaurantMenu} from 'react-icons/md';
 import {TbTicTac} from 'react-icons/tb';
@@ -13,8 +13,6 @@ import previewManage from '../resources/images/manage.png';
 import previewBookmark from '../resources/images/bookmark.png';
 import previewCountries from '../resources/images/countries.png';
 import previewWeather from '../resources/images/weather.png';
-import previewWorldCup from '../resources/images/worldcup.png';
-import previewCripto from '../resources/images/cripto.png';
 import previewMeli from '../resources/images/meli.png'; 
 import previewTateti from '../resources/images/tateti.png';
 import previewMorfi from '../resources/images/morfi.png';
@@ -72,7 +70,7 @@ export const projectDetails = [
         id: "1_clon-ml",
         img_dark_theme: FaRegHandshake,
         link: "https://mercadolibre-details-challenge-two.vercel.app/",
-        technologies: ['React.js', 'Typescript'],
+        technologies: ['React.js', 'Typescript', 'ChakraUI'],
         repository: "https://github.com/lucasBruma/mercadolibre-details-challenge",
         preview: previewMeli,
         es: {
@@ -82,22 +80,6 @@ export const projectDetails = [
         en: {
             title: "Mercado Libre Clone",
             description: 'I developed the product detail view for Mercado Libre.',
-        }
-    },
-    {
-        id: "1_manage-landing",
-        img_dark_theme: GoGraph,
-        link: "https://manage-landing-page-three-ecru.vercel.app/",
-        technologies: ['React.js', 'Javascript', 'ChakraUI'],
-        repository: "https://github.com/lucasBruma/manage-landing-page",
-        preview: previewManage,
-        es: {
-            title: 'Manage Landing Page',
-            description: 'Este es un challenge de Frontend Mentor donde a partir de unas consignas y un diseño dado, lo debo desarrollar con las tecnologías que quiera. En este caso, elegi React.js y ChakraUI las cuales me permitieron agilizar mucho más el desarrollo. Estuvo bastante entretenido y creo que quedó bastante similar al diseño original.'
-        },
-        en: {
-            title: "Manage Landing Page",
-            description: 'It is a Frontend Mentor Challenge where, based on given prompts and a provided design, I had to develop the project using the technologies of my choice. In this case, I chose React.js and ChakraUI which allowed me to speed up the development process significantly. It was quite entertaining and I believe the final result is quite faithful to the original design.',
         }
     },
     {
@@ -114,6 +96,38 @@ export const projectDetails = [
         en: {
             title: "Agency Posts",
             description: 'Project focused on digital agencies. Generates 10 Instagram posts given a prompt. I used the OpenAI API and the Pexels API',
+        }
+    },
+    {
+        id: "2_hbo-max",
+        img_dark_theme: BiCameraMovie,
+        link: "https://hbo-clon.vercel.app/",
+        technologies: ['Next.js', 'Typescript', 'Tailwind'],
+        repository: "https://github.com/lucasBruma/hbo-clon",
+        preview: previewPosts,
+        es: {
+            title: 'Clon de HBO Max',
+            description: 'Home y movie detail de HBO Max.'
+        },
+        en: {
+            title: "HBO Max clone",
+            description: "HBO Max's home and movie detail",
+        }
+    },
+    {
+        id: "1_manage-landing",
+        img_dark_theme: GoGraph,
+        link: "https://manage-landing-page-three-ecru.vercel.app/",
+        technologies: ['React.js', 'Javascript', 'ChakraUI'],
+        repository: "https://github.com/lucasBruma/manage-landing-page",
+        preview: previewManage,
+        es: {
+            title: 'Manage Landing Page',
+            description: 'Este es un challenge de Frontend Mentor donde a partir de unas consignas y un diseño dado, lo debo desarrollar con las tecnologías que quiera. En este caso, elegi React.js y ChakraUI las cuales me permitieron agilizar mucho más el desarrollo. Estuvo bastante entretenido y creo que quedó bastante similar al diseño original.'
+        },
+        en: {
+            title: "Manage Landing Page",
+            description: 'It is a Frontend Mentor Challenge where, based on given prompts and a provided design, I had to develop the project using the technologies of my choice. In this case, I chose React.js and ChakraUI which allowed me to speed up the development process significantly. It was quite entertaining and I believe the final result is quite faithful to the original design.',
         }
     },
     {
@@ -299,6 +313,10 @@ export const skills = [
         nombre: 'Next.js',
         logo: SiNextdotjs
     
+    },
+    {
+        nombre: 'S. Components',
+        logo: SiStyledcomponents
     }
 ]
 
