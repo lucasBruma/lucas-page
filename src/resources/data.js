@@ -75,7 +75,7 @@ export const projectDetails = [
         preview: previewMeli,
         es: {
             title: 'Clon de Mercado Libre',
-            description: 'Desarrollé la vista de detalle de producto de ML.'
+            description: 'Desarrollé la vista de detalle de producto de ML!'
         },
         en: {
             title: "Mercado Libre Clone",
